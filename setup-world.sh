@@ -10,9 +10,10 @@ mkdir /darkan
 cd /darkan
 mkdir world
 cd world
-git clone git@github.com:titandino/darkan-world-server.git
-git clone git@github.com:titandino/darkan-core.git
-git clone git@github.com:titandino/darkan-cache.git
+git clone git@github.com:DarkanRS/world-server.git
+git clone git@github.com:DarkanRS/core.git
+git clone git@github.com:DarkanRS/cache.git
+cd ./core && gradle publishToMavenLocal
 iptables -A INPUT -p tcp --dport $port -j ACCEPT
 ((port = port+1))
 iptables -A INPUT -p tcp --dport $port -j ACCEPT
